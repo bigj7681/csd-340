@@ -1,0 +1,57 @@
+h1 {
+    text-align: center; 
+}
+
+.left-div, .right-div {
+    width: 45%;
+}
+
+.left-div {
+    margin-right: 5%; 
+}
+
+.right-div {
+    margin-left: 5%; 
+}
+
+#container > div:last-child {
+    width: 100%; 
+    margin-top: 60px; 
+}
+
+h3 {
+    font-weight: 500; 
+}
+
+ol {
+    border: 1px solid red; 
+    border-radius: 15px; 
+    padding: 10px; 
+    list-style: inside; 
+    list-style-position: inside; 
+    font-weight: 300; 
+}
+
+ul {
+    border: 1px dashed red; 
+    border-radius: 15px; 
+    padding: 10px; 
+    list-style: upper-roman; 
+    list-style-position: inside; 
+    font-weight: 300; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+#container > div:last-child {
+    float: right; 
+    margin-bottom: 20px; 
+}
+
+#bottom-link {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+}

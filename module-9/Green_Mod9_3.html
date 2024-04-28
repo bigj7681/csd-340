@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Module 9.3 Assignment">
+  <meta name="keywords" content="HTML, meta, tags">
+  <meta name="author" content="Jon Green">
+  <title>CSD 340 Development with HTML and CSS</title>
+  <style>
+    .underscore {
+      display: inline-block;
+      width: 60px; 
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+  <h2> All About Me!</h2>
+  <p><class="intro">This chapter is all about me. I’m just your average nerd who likes nerdy things. Ever since I was a child, I have been in love with computers and technology. <span style="color:blue">My dream was to become an astronaut until I discovered that I had a fear of heights.</span> That fear ended my dream abruptly and I was forced to shift focus into science and technology here on earth.</p>
+  <p>Before we get too far into my story, let’s start from the <span id="span1" class="underscore">______</span> . I was born in <span id="span2" class="underscore">______</span>and have been here my entire life. I have two brothers and one sister. Out of all my siblings, I’m the youngest. Since learning to walk, I’ve always been interested in how things work and the mindset behind why they work.</p>
+  <p>Computers have always fascinated me. I’ve always wondered how and why they do what they do. I’m intrigued by understanding how they work and how to make them more user friendly. Computers are heavily integrated into our daily lives. Therefore, we must learn all the benefits to using them. I was born in the 80’s, therefore I was able to experience the true birth of the internet in the 90’s. I watched the world change in real-time thanks to the internet.</p>
+  <p>Throughout the 90’s, one of my favorite hobbies was going to the computer lab at <span id="span3" class="underscore">______</span>and surfing the internet. I was amazed at how quickly I could retrieve information without going to the library having to read physical books. This access sparked my interest into other things such as physics and computer engineering. The <span id="span4" class="underscore">______</span>single-handedly changed my life in how I obtained and learned information.</p>
+  <hr>
+  <address>
+    <p>
+
+      <a href="https://www.bellevue.edu">Bellevue University</a>)</p>
+      <p> 1000 Galvin Rd S </p>
+      <p>Bellevue, NE 68005</p>
+    </address>
+  
+    <button onclick="document.getElementById('span1').innerText = 'beginning'">First</button>
+    <button onclick="document.getElementById('span2').innerText = 'Carolina'">Second</button>
+    <button onclick="document.getElementById('span3').innerText = 'school'">Third</button>
+    <button onclick="document.getElementById('span4').innerText = 'internet'">Fourth</button>
+  
+    <div id="container">
+      <p>Placeholder:</p>
+      <div id="span1" class="underscore">______</div>
+    </div>
+  </body>
+  </html>

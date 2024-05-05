@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <script>
+    function displayImage(imageFile){
+      var largerImage = document.getElementById("mainImage");
+      var newNode = document.createElement("img");
+      newNode.id = "mainImage";
+      newNode.src = imageFile;
+      newNode.alt = "Large Image";
+      newNode.className = "mainImage";
+      newNode.style.width = "150px";
+      newNode.style.height = "100px";
+      largerImage.parentNode.replaceChild(newNode, largerImage);
+    }
+  </script>
+</head>
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+  <br>
+  <div>
+    <a href="#" onmouseover="dog.src='/Users/schoolstuff/csd/csd-340/module-10/dog1.png';" onmouseout="dog.src='/Users/schoolstuff/csd/csd-340/module-10/dog2.png';">
+      <img border="0" name="dog" src="/Users/schoolstuff/csd/csd-340/module-10/dog2.png" style="width: 300px; height: 300px;">
+    </a>
+  </div>
+  <br>
+  <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+    Run your mouse over the image to change.
+    <br>
+  </div>
+  <div>
+    <a href="#" onmouseover="pizza.src='/Users/schoolstuff/csd/csd-340/module-10/pizza2.png';" onmouseout="pizza.src='/Users/schoolstuff/csd/csd-340/module-10/pizza1.png';">
+      <img border="0" name="pizza" src="/Users/schoolstuff/csd/csd-340/module-10/pizza1.png" style="width: 300px; height: 300px;">
+    </a>
+  </div>
+  <br>
+  <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+    Run your mouse over the image to change.
+  </div>
+</body>
+</html>

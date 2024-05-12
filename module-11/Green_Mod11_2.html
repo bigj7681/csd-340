@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSD 340 Web Development with HTML and CSS</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #b5e7f7;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        padding: 10px 30px; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    #addBtn {
+        background-color: #19721c;
+        color: #fff;
+    }
+    #deleteBtn {
+        background-color: #f61b0c;
+        color: #fff;
+    }
+    #displayBtn {
+        background-color: #008CBA;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p> Click "Add" to add your item to the list.</p>
+    <input type="text" id="taskInput" placeholder="Enter task...">
+    <button id="addBtn">Add</button>
+    <button id="deleteBtn">Delete Last Item</button>
+    <button id="displayBtn">Display Items</button>
+    <div id="output"></div>
+</div>
+
+<script>
+    var tasks = [];
+    function addItem() {
+        var taskInput = document.getElementById('taskInput');
+        var taskText = taskInput.value.trim();
+        
+        if (taskText !== '') {
+            tasks.push(taskText);
+            alert("'" + taskText + "' has been added to the list at spot " + tasks.length);
+            taskInput.value = '';
+        }
+    }
+
+    function deleteLastItem() {
+        if (tasks.length > 0) {
+            var deletedTask = tasks.pop();
+            alert("'" + deletedTask + "' has been removed from the list.");
+        } else {
+            alert("There are no items contained in your list.");
+        }
+    }
+
+    function displayItems() {
+        var output = document.getElementById('output');
+        output.innerHTML = '';
+        
+        for (var i = 0; i < tasks.length; i++) {
+            var listItem = document.createElement('p');
+            listItem.textContent = (i + 1) + '. ' + tasks[i];
+            output.appendChild(listItem);
+        }
+    }
+
+    document.getElementById('addBtn').addEventListener('click', addItem);
+    document.getElementById('deleteBtn').addEventListener('click', deleteLastItem);
+    document.getElementById('displayBtn').addEventListener('click', displayItems);
+</script>
+</body>
+</html>
